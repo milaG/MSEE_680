@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LibraryModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="LibraryModelStoreContainer">
+    <EntitySet Name="Book" EntityType="LibraryModel.Store.Book" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DVD" EntityType="LibraryModel.Store.DVD" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Member" EntityType="LibraryModel.Store.Member" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="BookId" />
+    </Key>
+    <Property Name="BookId" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="BookTitle" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Author" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Summary" Type="varchar" MaxLength="100" />
+    <Property Name="BookDownload" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DVD">
+    <Key>
+      <PropertyRef Name="DvdId" />
+    </Key>
+    <Property Name="DvdId" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="DvdTitle" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="DvdSummary" Type="nvarchar" MaxLength="200" />
+    <Property Name="DvdRating" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="memberId" />
+    </Key>
+    <Property Name="memberId" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Phonenumber" Type="int" />
+    <Property Name="Username" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+</Schema>

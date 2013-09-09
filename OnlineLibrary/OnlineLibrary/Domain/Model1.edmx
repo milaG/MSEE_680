@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LibraryModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="LibraryModelStoreContainer">
+          <EntitySet Name="Book" EntityType="LibraryModel.Store.Book" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DVD" EntityType="LibraryModel.Store.DVD" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Member" EntityType="LibraryModel.Store.Member" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Book">
+          <Key>
+            <PropertyRef Name="BookId" />
+          </Key>
+          <Property Name="BookId" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="BookTitle" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Author" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Summary" Type="varchar" MaxLength="100" />
+          <Property Name="BookDownload" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DVD">
+          <Key>
+            <PropertyRef Name="DvdId" />
+          </Key>
+          <Property Name="DvdId" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="DvdTitle" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="DvdSummary" Type="nvarchar" MaxLength="200" />
+          <Property Name="DvdRating" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="memberId" />
+          </Key>
+          <Property Name="memberId" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Phonenumber" Type="int" />
+          <Property Name="Username" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LibraryModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="LibraryEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Books" EntityType="LibraryModel.Book" />
+          <EntitySet Name="DVDs" EntityType="LibraryModel.DVD" />
+          <EntitySet Name="Members" EntityType="LibraryModel.Member" />
+        </EntityContainer>
+        <EntityType Name="Book">
+          <Key>
+            <PropertyRef Name="BookId" />
+          </Key>
+          <Property Name="BookId" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="BookTitle" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Author" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Summary" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="BookDownload" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="DVD">
+          <Key>
+            <PropertyRef Name="DvdId" />
+          </Key>
+          <Property Name="DvdId" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="DvdTitle" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="DvdSummary" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="DvdRating" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="memberId" />
+          </Key>
+          <Property Name="memberId" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Phonenumber" Type="Int32" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LibraryModelStoreContainer" CdmEntityContainer="LibraryEntities">
+          <EntitySetMapping Name="Books">
+            <EntityTypeMapping TypeName="LibraryModel.Book">
+              <MappingFragment StoreEntitySet="Book">
+                <ScalarProperty Name="BookId" ColumnName="BookId" />
+                <ScalarProperty Name="BookTitle" ColumnName="BookTitle" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Summary" ColumnName="Summary" />
+                <ScalarProperty Name="BookDownload" ColumnName="BookDownload" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DVDs">
+            <EntityTypeMapping TypeName="LibraryModel.DVD">
+              <MappingFragment StoreEntitySet="DVD">
+                <ScalarProperty Name="DvdId" ColumnName="DvdId" />
+                <ScalarProperty Name="DvdTitle" ColumnName="DvdTitle" />
+                <ScalarProperty Name="DvdSummary" ColumnName="DvdSummary" />
+                <ScalarProperty Name="DvdRating" ColumnName="DvdRating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Members">
+            <EntityTypeMapping TypeName="LibraryModel.Member">
+              <MappingFragment StoreEntitySet="Member">
+                <ScalarProperty Name="memberId" ColumnName="memberId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Phonenumber" ColumnName="Phonenumber" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Default" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

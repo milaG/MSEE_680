@@ -1,0 +1,7 @@
+C:\Users\Mila\Documents\Visual Studio 2012\Projects\OnlineLibrary\OnlineLibrary\bin\OnlineLibrary.dll
+C:\Users\Mila\Documents\Visual Studio 2012\Projects\OnlineLibrary\OnlineLibrary\bin\OnlineLibrary.pdb
+C:\Users\Mila\Documents\Visual Studio 2012\Projects\OnlineLibrary\OnlineLibrary\bin\EntityFramework.dll
+C:\Users\Mila\Documents\Visual Studio 2012\Projects\OnlineLibrary\OnlineLibrary\bin\EntityFramework.xml
+C:\Users\Mila\Documents\Visual Studio 2012\Projects\OnlineLibrary\OnlineLibrary\obj\Debug\OnlineLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Mila\Documents\Visual Studio 2012\Projects\OnlineLibrary\OnlineLibrary\obj\Debug\OnlineLibrary.dll
+C:\Users\Mila\Documents\Visual Studio 2012\Projects\OnlineLibrary\OnlineLibrary\obj\Debug\OnlineLibrary.pdb
