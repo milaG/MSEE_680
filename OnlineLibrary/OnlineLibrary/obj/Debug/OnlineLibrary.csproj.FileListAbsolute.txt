@@ -1,7 +1,8 @@
-C:\Users\Mila\Documents\Visual Studio 2012\Projects\OnlineLibrary\OnlineLibrary\bin\OnlineLibrary.dll
-C:\Users\Mila\Documents\Visual Studio 2012\Projects\OnlineLibrary\OnlineLibrary\bin\OnlineLibrary.pdb
-C:\Users\Mila\Documents\Visual Studio 2012\Projects\OnlineLibrary\OnlineLibrary\bin\EntityFramework.dll
-C:\Users\Mila\Documents\Visual Studio 2012\Projects\OnlineLibrary\OnlineLibrary\bin\EntityFramework.xml
-C:\Users\Mila\Documents\Visual Studio 2012\Projects\OnlineLibrary\OnlineLibrary\obj\Debug\OnlineLibrary.csprojResolveAssemblyReference.cache
-C:\Users\Mila\Documents\Visual Studio 2012\Projects\OnlineLibrary\OnlineLibrary\obj\Debug\OnlineLibrary.dll
-C:\Users\Mila\Documents\Visual Studio 2012\Projects\OnlineLibrary\OnlineLibrary\obj\Debug\OnlineLibrary.pdb
+C:\github\msse680\OnlineLibrary\OnlineLibrary\bin\Debug\OnlineLibrary.dll.config
+C:\github\msse680\OnlineLibrary\OnlineLibrary\bin\Debug\OnlineLibrary.dll
+C:\github\msse680\OnlineLibrary\OnlineLibrary\bin\Debug\OnlineLibrary.pdb
+C:\github\msse680\OnlineLibrary\OnlineLibrary\bin\Debug\EntityFramework.dll
+C:\github\msse680\OnlineLibrary\OnlineLibrary\bin\Debug\EntityFramework.xml
+C:\github\msse680\OnlineLibrary\OnlineLibrary\obj\Debug\OnlineLibrary.csprojResolveAssemblyReference.cache
+C:\github\msse680\OnlineLibrary\OnlineLibrary\obj\Debug\OnlineLibrary.dll
+C:\github\msse680\OnlineLibrary\OnlineLibrary\obj\Debug\OnlineLibrary.pdb

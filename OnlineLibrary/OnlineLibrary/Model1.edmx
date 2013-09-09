@@ -14,7 +14,7 @@
           <Key>
             <PropertyRef Name="BookId" />
           </Key>
-          <Property Name="BookId" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="BookId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="BookTitle" Type="varchar" Nullable="false" MaxLength="100" />
           <Property Name="Author" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="Summary" Type="varchar" MaxLength="100" />
@@ -24,7 +24,7 @@
           <Key>
             <PropertyRef Name="DvdId" />
           </Key>
-          <Property Name="DvdId" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="DvdId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="DvdTitle" Type="nvarchar" Nullable="false" MaxLength="100" />
           <Property Name="DvdSummary" Type="nvarchar" MaxLength="200" />
           <Property Name="DvdRating" Type="nchar" MaxLength="10" />
@@ -33,7 +33,7 @@
           <Key>
             <PropertyRef Name="memberId" />
           </Key>
-          <Property Name="memberId" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="memberId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="Phonenumber" Type="int" />
@@ -54,7 +54,7 @@
           <Key>
             <PropertyRef Name="BookId" />
           </Key>
-          <Property Name="BookId" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="BookId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="BookTitle" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="Author" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="Summary" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
@@ -64,7 +64,7 @@
           <Key>
             <PropertyRef Name="DvdId" />
           </Key>
-          <Property Name="DvdId" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="DvdId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="DvdTitle" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
           <Property Name="DvdSummary" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
           <Property Name="DvdRating" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
@@ -73,7 +73,7 @@
           <Key>
             <PropertyRef Name="memberId" />
           </Key>
-          <Property Name="memberId" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="memberId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="Phonenumber" Type="Int32" />
@@ -135,7 +135,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="Default" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

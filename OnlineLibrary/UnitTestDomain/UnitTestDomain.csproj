@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FBD7865F-DA38-4984-9A08-91750B559542}</ProjectGuid>
+    <ProjectGuid>{36D2254B-727F-4CAA-B2CF-C9984599BDAB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DomainTest</RootNamespace>
-    <AssemblyName>DomainTest</AssemblyName>
+    <RootNamespace>UnitTestDomain</RootNamespace>
+    <AssemblyName>UnitTestDomain</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,7 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Accessibility" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -51,17 +53,17 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTestMember.cs" />
+    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OnlineLibrary\OnlineLibrary.csproj">
-      <Project>{586fc165-cc20-4f38-9bd2-ea699e11b5c0}</Project>
+      <Project>{80696924-299d-49f3-99fa-02649d521f7d}</Project>
       <Name>OnlineLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App1.config" />
+    <None Include="app.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
