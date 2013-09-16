@@ -1,7 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OnlineLibrary;
-using System.Linq; 
+using System.Linq;
+using System.Collections.Generic;
 
 namespace UnitTestDomain
 {
@@ -80,5 +81,70 @@ namespace UnitTestDomain
             Db.SaveChanges();
         }
 
+        [TestMethod]
+        public void InsertMemberByRepository()
+        {
+            var memberRepo = new DataRepository<Member>();
+
+            Member memb = new Member();
+            memb.FirstName = "mary";
+            memb.LastName = "Davis";
+            memb.Username = "userrtest2";
+            memb.Password = "1234";
+
+            memberRepo.Insert(memb);
+        }
+
+        [TestMethod]
+        public void InserBookByRepository()
+        {
+            var bookRepo = new DataRepository<Book>();
+
+            Book bb = new Book();
+            bb.BookTitle = "Great Book";
+            bb.Author = "Mila";
+            bb.BookDownload = "yes";
+
+            bookRepo.Insert(bb);
+        }
+
+        [TestMethod]
+        public void InserDVDByRepository()
+        {
+            var DVDRepo = new DataRepository<DVD>();
+
+            DVD dvd = new DVD();
+            dvd.DvdTitle = "Ariel";
+            dvd.DvdRating = "E";
+
+            DVDRepo.Insert(dvd);
+        }
+
+        [TestMethod]
+        public void RetrieveMembersUsingRepository()
+        {
+            var memberRepo = new DataRepository<Member>();
+
+            List<Member> myList = memberRepo.GetAll().ToList<Member>();
+            Assert.IsTrue(myList.Count > 0);
+        }
+
+        [TestMethod]
+        public void RetrieveBooksUsingRepository()
+        {
+            var bookRepo = new DataRepository<Book>();
+
+            List<Book> myList = bookRepo.GetAll().ToList<Book>();
+            Assert.IsTrue(myList.Count > 0);
+        }
+
+        [TestMethod]
+        public void RetrieveDVDsUsingRepository()
+        {
+            var DVDRepo = new DataRepository<DVD>();
+
+            List<DVD> myList = DVDRepo.GetAll().ToList<DVD>();
+            Assert.IsTrue(myList.Count > 0);
+        }
     }
 }
