@@ -3,6 +3,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OnlineLibrary;
 using System.Linq;
 using System.Collections.Generic;
+using OnlineLibrary.Domain;
+using OnlineLibrary.Service;
+
 
 namespace UnitTestDomain
 {
@@ -96,7 +99,7 @@ namespace UnitTestDomain
         }
 
         [TestMethod]
-        public void InserBookByRepository()
+        public void InsertBookByRepository()
         {
             var bookRepo = new DataRepository<Book>();
 
@@ -109,7 +112,7 @@ namespace UnitTestDomain
         }
 
         [TestMethod]
-        public void InserDVDByRepository()
+        public void InsertDVDByRepository()
         {
             var DVDRepo = new DataRepository<DVD>();
 

@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{36D2254B-727F-4CAA-B2CF-C9984599BDAB}</ProjectGuid>
+    <ProjectGuid>{A35BC27C-2E0A-41D3-B064-73A424D9FA37}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnitTestDomain</RootNamespace>
-    <AssemblyName>UnitTestDomain</AssemblyName>
+    <RootNamespace>UnitTestServices</RootNamespace>
+    <AssemblyName>UnitTestServices</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,10 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Accessibility" />
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -62,9 +58,10 @@
       <Project>{80696924-299d-49f3-99fa-02649d521f7d}</Project>
       <Name>OnlineLibrary</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
+    <ProjectReference Include="..\UnitTestDomain\UnitTestDomain.csproj">
+      <Project>{36d2254b-727f-4caa-b2cf-c9984599bdab}</Project>
+      <Name>UnitTestDomain</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

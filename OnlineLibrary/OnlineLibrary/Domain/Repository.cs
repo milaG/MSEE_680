@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Linq.Expressions;
 using System.Data.Entity;
 using System.Configuration;
+using OnlineLibrary.Domain;
+using OnlineLibrary.Service;
 
 
 namespace OnlineLibrary
@@ -114,7 +116,6 @@ namespace OnlineLibrary
         {
             return _dataContext.Set<T>().AsQueryable();
         }
-
         /// <summary>
         /// Inserts a record into the database
         /// </summary>

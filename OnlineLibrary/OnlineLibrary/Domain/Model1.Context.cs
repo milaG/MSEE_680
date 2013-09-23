@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OnlineLibrary
+namespace OnlineLibrary.Domain
 {
     using System;
     using System.Data.Entity;

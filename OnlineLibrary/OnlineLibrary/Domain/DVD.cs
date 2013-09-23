@@ -7,17 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OnlineLibrary
+namespace OnlineLibrary.Domain
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Book
+    public partial class DVD
     {
-        public int BookId { get; set; }
-        public string BookTitle { get; set; }
-        public string Author { get; set; }
-        public string Summary { get; set; }
-        public string BookDownload { get; set; }
+        public int DvdId { get; set; }
+        public string DvdTitle { get; set; }
+        public string DvdSummary { get; set; }
+        public string DvdRating { get; set; }
     }
 }

@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{4F1F56F0-E65
 		SQL Database Script.txt = SQL Database Script.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestService", "UnitTestServices\UnitTestService.csproj", "{A35BC27C-2E0A-41D3-B064-73A424D9FA37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{36D2254B-727F-4CAA-B2CF-C9984599BDAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36D2254B-727F-4CAA-B2CF-C9984599BDAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36D2254B-727F-4CAA-B2CF-C9984599BDAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A35BC27C-2E0A-41D3-B064-73A424D9FA37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A35BC27C-2E0A-41D3-B064-73A424D9FA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A35BC27C-2E0A-41D3-B064-73A424D9FA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A35BC27C-2E0A-41D3-B064-73A424D9FA37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
